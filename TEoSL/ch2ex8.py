@@ -9,6 +9,25 @@ from sklearn.neighbors import KNeighborsClassifier
 # Show both the training and test error for each choice. The zipcode data are available from the 
 # book website www-stat.stanford.edu/ElemStatLearn.
 
+# results:
+# Test error rate of Linear Regression is 4.12%
+# Train error rate of Linear Regression is 0.58%
+# k-NN Model: k is 1, train/test error rates are 0.00% and 2.47%
+# k-NN Model: k is 2, train/test error rates are 0.58% and 2.47%
+# k-NN Model: k is 3, train/test error rates are 0.50% and 3.02%
+# k-NN Model: k is 4, train/test error rates are 0.43% and 2.75%
+# k-NN Model: k is 5, train/test error rates are 0.58% and 3.02%
+# k-NN Model: k is 6, train/test error rates are 0.50% and 3.02%
+# k-NN Model: k is 7, train/test error rates are 0.65% and 3.30%
+# k-NN Model: k is 8, train/test error rates are 0.58% and 3.30%
+# k-NN Model: k is 9, train/test error rates are 0.94% and 3.57%
+# k-NN Model: k is 10, train/test error rates are 0.79% and 3.57%
+# k-NN Model: k is 11, train/test error rates are 0.86% and 3.57%
+# k-NN Model: k is 12, train/test error rates are 0.72% and 3.57%
+# k-NN Model: k is 13, train/test error rates are 0.86% and 3.85%
+# k-NN Model: k is 14, train/test error rates are 0.86% and 3.85%
+# k-NN Model: k is 15, train/test error rates are 0.94% and 3.85%
+
 # get relative data folder
 PATH = pathlib.Path(__file__).resolve().parents[1]
 DATA_PATH = PATH.joinpath("data").resolve()
