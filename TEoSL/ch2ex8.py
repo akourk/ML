@@ -14,8 +14,8 @@ PATH = pathlib.Path(__file__).resolve().parents[1]
 DATA_PATH = PATH.joinpath("data").resolve()
 
 # get original data
-train = np.genfromtxt(DATA_PATH.joinpath("zip.train"), dtype=float, delimiter=' ', skip_header=False)
-test = np.genfromtxt(DATA_PATH.joinpath("zip.test"), dtype=float, delimiter=' ', skip_header=False)
+train = np.genfromtxt(DATA_PATH.joinpath("zip_train_2and3.csv"), dtype=float, delimiter=',', skip_header=True)
+test = np.genfromtxt(DATA_PATH.joinpath("zip_test_2and3.csv"), dtype=float, delimiter=',', skip_header=True)
 
 # prepare training and testing data
 x_train, y_train = train[:, 1:], train[:, 0]
