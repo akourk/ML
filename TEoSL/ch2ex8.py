@@ -40,12 +40,58 @@ test = np.genfromtxt(DATA_PATH.joinpath("zip_test_2and3.csv"), dtype=float, deli
 x_train, y_train = train[:, 1:], train[:, 0]
 x_test, y_test = test[:, 1:], test[:, 0]
 
+# python slice notation:
+#   (not to be confused with python's slice object: "slice()" e.g. a[slice(start, stop, step)] is equivalent to a[start:stop:step])
+
+# a[start:stop]  # items start through stop-1 *(:stop value represents the first value that is NOT in the selected slice.)
+# a[start:]      # items start through the rest of the array
+# a[:stop]       # items from the beginning through stop-1
+# a[:]           # a copy of the whole array
+
+# a[start:stop:step] # start through stop, by step
+
+# start or stop may be a negative number, which means it 
+# counts from the end of the array instead of the beginning. So:
+# a[-1]    # last item in the array
+# a[-2:]   # last two items in the array
+# a[:-2]   # everything except the last two items
+
+# Similarly, step may be a negative number:
+
+# a[::-1]    # all items in the array, reversed
+# a[1::-1]   # the first two items, reversed
+# a[:-3:-1]  # the last two items, reversed
+# a[-3::-1]  # everything except the last two items, reversed
+
+
+print("train:")
+print(train)
+
+# print("train[:, 0]")
+# print(train[:, 0])
+
+# print("train[:, 1:]")
+# print(train[:, 1:])
+
+# print("train[:2, 0]")
+# print(train[:2, :])
+
+print("x_train:")
+print(x_train)
+print("y_train:")
+print(y_train)
+
+
 # for classification purpose
 # we assign 1 to digit '3' and 0 to '2'
 y_train[y_train == 3] = 1
 y_train[y_train == 2] = 0
 y_test[y_test == 3] = 1
 y_test[y_test == 2] = 0
+
+
+print("y_train:")
+print(y_train[:10])
 
 # a utility function to assign prediction
 def assign(arr):
