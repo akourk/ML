@@ -4,7 +4,7 @@ from sklearn.linear_model import LinearRegression
 from sklearn.neighbors import KNeighborsClassifier
 
 # Ex 2.8
-# Compare the classification performance of linear regression and k– nearest neighbor classification
+# Compare the classification performance of linear regression and k–nearest neighbor classification
 # on the zipcode data. In particular, consider only the 2’s and 3’s, and k = 1, 3, 5, 7 and 15. 
 # Show both the training and test error for each choice. The zipcode data are available from the 
 # book website www-stat.stanford.edu/ElemStatLearn.
@@ -80,7 +80,6 @@ print("x_train:")
 print(x_train)
 print("y_train:")
 print(y_train)
-
 
 # for classification purpose
 # we assign 1 to digit '3' and 0 to '2'

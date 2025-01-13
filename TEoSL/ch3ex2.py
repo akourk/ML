@@ -5,9 +5,15 @@ from scipy.stats import chi2
 
 
 # Given data on two variables PX3 and Y ,
-# consider fitting a cubic polynomial regression model f(X) = j=0 βjXj. 
+# consider fitting a cubic polynomial regression model f(X) = ∑3,j=0 βjXj. 
 # In addition to plotting the fitted curve, you would like a 95% 
 # confidence band about the curve. Consider the following two approaches:
+
+# 1. At each point x0, form a 95% confidence interval for the linear 
+# function aT β = ∑3,j=0 βj xj0. 
+
+# 2. Form a 95% confidence set for β as in (3.15), which in turn generates
+# confidence intervals for f (x0).
 
 
 n = 10
